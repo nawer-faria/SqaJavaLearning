@@ -11,6 +11,10 @@ public class HotelRegency extends HotelReservationMoreThan0Abstraction {
         return null;
     }
 
+    public int canAccommodate(int personPerRoom){
+        return getAvailableRoomNumber()*personPerRoom;
+    }
+
     public static void main(String[] args) {
 
         //Abstraction with implementation > 0%
@@ -22,6 +26,7 @@ public class HotelRegency extends HotelReservationMoreThan0Abstraction {
         hotel2.displayGreetings();
         hotel2.printInfo();
         System.out.println("Available Room: " + hotel2.getAvailableRoomNumber());
+        System.out.println("Can Accommodate "+hotel2.canAccommodate(4));
         System.out.println("Food Menu: " + hotel2.getFoodMenu());
 
     }

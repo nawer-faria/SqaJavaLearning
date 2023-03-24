@@ -12,6 +12,10 @@ public class HotelPanPacific extends HotelReservationMoreThan0Abstraction {
         return "Rice, Meat, Dal, Doi ";
     }
 
+    public int canAccommodate(int personPerRoom){
+        return getAvailableRoomNumber()*personPerRoom;
+    }
+
     public void aboutHotel(){
         System.out.println("A conveniently located hotel in Dhaka with luxury facilities, Pan Pacific Sonargaon Dhaka is the ideal accommodation for a pampering stay!");
     }
@@ -27,6 +31,7 @@ public class HotelPanPacific extends HotelReservationMoreThan0Abstraction {
         hotel1.displayGreetings();
         hotel1.printInfo();
         System.out.println("Available Room: " + hotel1.getAvailableRoomNumber());
+        System.out.println("Can Accommodate "+hotel1.canAccommodate(4));
         System.out.println("Food Menu: " + hotel1.getFoodMenu());
         hotel1.aboutHotel();
 
